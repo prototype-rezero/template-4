@@ -36,3 +36,5 @@ input, button, textarea, select {
     font: inherit;
 }
 
+/* end global rules   */
+
