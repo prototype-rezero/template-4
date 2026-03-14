@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 /* aside */
 aside {
     position: sticky;
-    width: fit-content;
+    width: 200px;
     left: 0;
     top: 0;
     min-height: 100vh;
@@ -65,13 +65,20 @@ aside {
     padding-right: 0;
     /* box-shadow: 0 10px 20px #ccc; */
     z-index: 1;
+    transition: 0.3s;
+    overflow: hidden;
+}
+aside span {
+    font-size: 0;
+    opacity: 0;
+    transition: 0.3s;
 }
 aside h3 {
     font-size: 20px;
     position: relative;
-    width: fit-content;
     margin: 0 auto;
     transform: translateX(-10px);
+    transition: 0.3s;
 }
 aside h3::before {
     content: "";
@@ -104,11 +111,15 @@ aside ul {
 aside ul li {
     padding: 8px;
     font-size: 14px;
-    padding-left: 15px;
-    border-radius: 15px;
+    padding-left: 10px;
+    border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     cursor: pointer;
+}
+aside ul li.active {
+    padding-left: 20px;
+    background-color: var(--light-grey);
     position: relative;
 }
 aside ul li.active::before{
@@ -133,18 +144,32 @@ aside ul li.active::after{
     bottom: -20px;
     box-shadow: 12px -12px 0 0 var(--light-grey);
 }
-aside ul li:hover {
+aside ul li:not(.active):hover {
     padding-left: 20px;
-
 }
 aside ul li a, aside ul li i {
     color: #111;
 }
 aside ul li a {
     font-weight: 500;
+    transition: 0.3s;
 }
 aside ul li i{
     margin-right: 10px;
+}
+aside:has(input:checked) {
+    width: 80px;
+}
+aside:has(input:checked) h3{
+    font-size: 0;
+}
+aside:has(input:checked) ul li a {
+    font-size: 0;
+    opacity: 0;
+}
+aside:has(input:checked) span {
+    font-size: 20px;
+    opacity: 1;
 }
 /* end  aside */
 

@@ -11,9 +11,6 @@
 .trans {
   transition: 0.3s;
 }
-.active {
-  background-color: var(--light-grey);
-}
 .d-flex {
   display: flex;
 }
