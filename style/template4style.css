@@ -30,6 +30,7 @@ body {
     line-height: 1.5;
     min-height: 100vh;
     font-family: "open sans", sans-serif;
+    color: #111;
 }
 
 ul, ol {
@@ -252,15 +253,13 @@ aside ul li i{
 }
 .dashboard h1 {
     margin-left: 20px;
+    margin-bottom: 5px;
 }
 .dashboard .wrapper{
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
-}
-.dashboard .wrapper .welcome {
-    background-color: white;
 }
 .dashboard .wrapper .welcome .top {
     display: flex;
@@ -284,11 +283,51 @@ aside ul li i{
 .welcome .top img {
     width: 200px;
 }
-.welcome .top img:nth-child(3) {
+.welcome .top img:nth-of-type(2) {
     position: absolute;
     width: 50px;
     border-radius: 50%;
-    bottom: 20px;
+    bottom: -25px;
     left: 20px;
+}
+.welcome .bottom {
+    padding-top: 45px;
+}
+.welcome .bottom .stats {
+    display: flex;
+    gap: 130px;
+    justify-content: center;
+    padding: 20px 0px 15px 0px;
+    border-top: 1px solid var(--bitdarker-grey);
+    border-bottom: 1px solid var(--bitdarker-grey);
+    margin-bottom: 35px;
+}
+.welcome .bottom .stats .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+.welcome .bottom .stats .stat span{
+    font-size: 16px;
+    color: var(--grey-color);   
+}
+.welcome .bottom .stats .stat h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+.welcome .bottom a {
+    background-color: var(--blue-color);
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: fit-content;
+    margin-left: auto;
+    display: block;
+
+}
+.welcome .bottom a:hover {
+    transform: scale(1.05);
 }
 /* end dashboard section */
