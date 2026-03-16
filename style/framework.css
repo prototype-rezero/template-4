@@ -6,7 +6,8 @@
 .d-flex {
   display: flex;
 }
-.fd-c {
+.flexd-c {
+  display: flex;
   flex-direction: column;
 }
 .f-wrap {
@@ -23,6 +24,9 @@
 }
 .d-grid {
   display: grid;
+}
+.gap-10 {
+  gap: 10px;
 }
 .gap-20 {
   gap: 20px;
@@ -189,6 +193,9 @@
 }
 .fs-25 {
   font-size: 25px;
+}
+.fs-26 {
+  font-size: 26px;
 }
 .fw-bold {
   font-weight: bold;
