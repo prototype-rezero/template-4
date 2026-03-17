@@ -490,4 +490,24 @@ aside ul li i{
     color: var(--grey-color);
     font-size: 16px;
 }
+
+/* news */
+.news .event img {
+    width: 100px;
+    border-radius: 10px;
+}
+.news .event {
+    padding: 20px 0;
+}
+.news .event:not(:last-of-type) {
+    border-bottom: 2px solid var(--light-grey);
+}
+.news .event span {
+    margin-left: auto;
+    background-color: var(--light-grey);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+
+}
 /* end dashboard section */
