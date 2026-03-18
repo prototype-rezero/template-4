@@ -91,11 +91,11 @@ aside {
 aside::after {
     content: "";
     position: absolute;
-    width: 1px;
+    width: 3px;
     z-index: 1;
-    height: 64px;
-    background-color: #111;
-    right: -1px;
+    height: 68px;
+    background-color: var(--lightblue-grey);
+    right: -3px;
     opacity: 1;
     top: 0;
 }
@@ -186,12 +186,12 @@ aside ul li i{
 /* end  aside */
 
 /* dashboard section */
-.dashboard {
+section {
     flex: 1;
     overflow: auto;
     background-color: var(--lightblue-grey);
 }
-.main .dashboard header {
+.main section header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -199,8 +199,9 @@ aside ul li i{
     padding: 20px;
     height: 64px;
     background-color: white;
+    border-bottom-left-radius: 10px;
 }
-.main .dashboard header .search {
+.main section header .search {
     display: flex;
     align-items: center;
     border: 1px solid var(--bitdarker-grey);
@@ -211,41 +212,41 @@ aside ul li i{
     font-size: 14px;
     color: var(--bitdarker-grey);
 }
-.main .dashboard header .search input {
+.main section header .search input {
     width: 120px;
     transition: 0.3s;
 }
-.main .dashboard header .search input:focus {
+.main section header .search input:focus {
     width: 170px;
 }
-.main .dashboard header .search i {
+.main section header .search i {
     transition: 0.3s;
     transform: translateY(1px);
 }
-.main .dashboard header .search:has(input:focus) i {
+.main section header .search:has(input:focus) i {
     color : var(--grey-color)
 }
-.main .dashboard header  .icons {
+.main section header  .icons {
     display: flex;
     align-items: center;
     gap: 10px;
     position: relative;
 }
-.main .dashboard header  .icons img{
+.main section header  .icons img{
     width: 30px;
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
 }
-.main .dashboard header  .icons img:hover {
+.main section header  .icons img:hover {
     transform: scale(1.1);
 }
-.main .dashboard header  .icons i {
+.main section header  .icons i {
     font-size: 20px;
     color: #111;
 }
-.main .dashboard header  .icons span {
+.main section header  .icons span {
     position: absolute;
     top: 0;
     width: 8px;
@@ -259,11 +260,11 @@ aside ul li i{
     flex-direction: column;
     gap: 15px;
 }
-.dashboard h1 {
+h1 {
     margin-left: 20px;
     margin-bottom: 5px;
 }
-.dashboard .wrapper{
+.dashboard .wrapper {
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -567,6 +568,7 @@ aside ul li i{
 }
 .projects .step p{
     margin-left: 30px;
+    font-weight: 500;
 }
 .projects .step span{
     position: absolute;
@@ -592,5 +594,77 @@ aside ul li i{
     50% {
         background-color: white;
     }
+}
+
+/* reminders */
+.reminders .content span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.reminders .content .info {
+    padding-left: 15px;
+    border-left: 2px solid var(--blue-color);
+}
+.reminders .content .reminder:nth-of-type(2) .info  {
+    border-left: 2px solid var(--green-color);
+}
+.reminders .content .reminder:nth-of-type(4) .info  {
+    border-left: 2px solid var(--red-color);
+}
+.reminders .content .reminder:nth-of-type(3) .info  {
+    border-left: 2px solid var(--orange-color);
+}
+
+/* table */
+.table {
+  padding: 0 20px;  
+
+}
+.tablediv {
+    background-color: var(--lightblue-grey);
+    border-radius: 7px;
+    padding: 2px;
+}
+.tablediv table {
+    width: 100%;
+    border: none;
+    border-spacing: 5px;
+}
+@media (max-width: 991px) {
+    .tablediv {
+        overflow-x: scroll;
+    }
+    .tablediv table {
+        min-width: 800px;
+    }
+}
+.tablediv table thead tr td{
+    background-color: #f9fcff;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.tablediv table tbody tr td {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    color: #222;
+    transition: 0.2s;
+}
+table tbody tr:hover td{
+    background-color: #f9fcff;
+}
+table span {
+    color: white;
+    padding: 4px 10px; 
+    border-radius: 7px;
+    font-size: 14px;
 }
 /* end dashboard section */
