@@ -278,7 +278,15 @@ aside ul li i{
     position: relative;
 }
 
+.dashboard .box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
 /* welcome */
+.dashboard .welcome {
+    padding: 0px;
+}
 .welcome .top .info  {
     display: flex;
     flex-direction: column;
@@ -288,7 +296,6 @@ aside ul li i{
     font-size: 26px;
 }
 .welcome .top .info p {
-    font-size: 16px;
     color: var(--grey-color);
 }
 .welcome .top img {
@@ -320,11 +327,9 @@ aside ul li i{
     gap: 7px;
 }
 .welcome .bottom .stats .stat span{
-    font-size: 16px;
     color: var(--grey-color);   
 }
 .welcome .bottom .stats .stat h3 {
-    font-size: 16px;
     font-weight: 500;
 }
 .welcome .bottom a {
@@ -359,7 +364,6 @@ aside ul li i{
 }
 .quickdraft .info p {
     color: var(--grey-color);
-    font-size: 16px;
 }
 .quickdraft form input[type="text"], .quickdraft form textarea {
     background-color: var(--light-grey);
@@ -404,7 +408,6 @@ aside ul li i{
 }
 .targets  .info p {
     color: var(--grey-color);
-    font-size: 16px;
 }
 .targets .stat {
     display: flex;
@@ -509,5 +512,85 @@ aside ul li i{
     border-radius: 10px;
     font-size: 14px;
 
+}
+
+/* tasks */
+.tasks .content .task {
+    padding: 15px 0;
+}
+.tasks .content .task:nth-child(4) {
+    text-decoration: line-through;
+    color: var(--grey-color);
+}
+.tasks .content .task:nth-child(4) .info p {
+    text-decoration: line-through;
+    color: var(--bitdarker-grey);
+}
+.tasks .content .task:not(:last-of-type) {
+    border-bottom: 2px solid var(--light-grey);
+}
+.tasks .content .task i {
+    transition: 0.3s;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--lightblue-grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tasks .content .task i:hover {
+    color: var(--red-color);
+}
+
+/* projects */
+.projects .content {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.projects .content::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    width: 2px;
+    background-color: var(--blue-color);
+    height: 90%;
+    transform: translateY(-50%);
+}
+.projects .step {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.projects .step p{
+    margin-left: 30px;
+}
+.projects .step span{
+    position: absolute;
+    display: block;
+    left: -9px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+}
+.projects .step:nth-child(5) span{
+    background-color: white;
+}
+.projects .step:nth-child(4) span {
+    animation: fading 1.5s ease-in-out infinite;
+}
+@keyframes fading {
+    0%, 100% {
+        background-color: var(--blue-color);
+    }
+    50% {
+        background-color: white;
+    }
 }
 /* end dashboard section */
