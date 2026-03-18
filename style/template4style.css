@@ -148,6 +148,9 @@ aside ul li.active {
     background-color: var(--lightblue-grey);
     position: relative;
 }
+aside ul li.active a, aside ul li.active i {
+    color: rgb(0, 66, 99);
+}
 aside ul li.active::before{
     content: "";
     position: absolute;
@@ -179,6 +182,8 @@ aside ul li a, aside ul li i {
 aside ul li a {
     font-weight: 500;
     transition: 0.3s;
+    width: 100%;
+    display: block;
 }
 aside ul li i{
     margin-right: 10px;
