@@ -99,14 +99,18 @@ aside::after {
     opacity: 1;
     top: 0;
 }
-aside h3 {
+aside h3, aside > span {
+    font-weight: bold;
     font-size: 20px;
     position: relative;
     margin: 0 auto;
     transform: translateX(-10px);
     transition: 0.3s;
 }
-aside h3::before {
+aside > span {
+    display: none;
+}
+aside h3::before , aside > span::before {
     content: "";
     position: absolute;
     left: 0;
@@ -117,7 +121,12 @@ aside h3::before {
     height: 2px;
     background-color: #111;
 }
-aside h3::after {
+ aside > span::before {
+    width: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+aside h3::after , aside > span::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -129,19 +138,41 @@ aside h3::after {
     border-radius: 50%;
     background-color: #111;
 }
+@media (max-width: 768px) {
+    aside h3 {
+        display: none;
+    }
+    aside > span {
+        display: block;
+        line-height: 1;
+    }
+}
 aside ul {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 aside ul li {
-    padding: 8px;
+    padding: 0 8px;
     font-size: 14px;
     padding-left: 10px;
     border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     cursor: pointer;
+}
+aside ul li a, aside ul li i {
+    color: #111;
+}
+aside ul li a {
+    font-weight: 500;
+    transition: 0.3s;
+    width: 100%;
+    display: block;
+    padding: 8px 0;
+}
+aside ul li i{
+    margin-right: 10px;
 }
 aside ul li.active {
     padding-left: 20px;
@@ -176,17 +207,13 @@ aside ul li.active::after{
 aside ul li:not(.active):hover {
     padding-left: 20px;
 }
-aside ul li a, aside ul li i {
-    color: #111;
-}
-aside ul li a {
-    font-weight: 500;
-    transition: 0.3s;
-    width: 100%;
-    display: block;
-}
-aside ul li i{
-    margin-right: 10px;
+@media (max-width: 768px) {
+    aside {
+        width: 75px;
+    }
+    aside ul li a span {
+        display: none;
+    }
 }
 /* end  aside */
 
