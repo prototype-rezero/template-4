@@ -320,7 +320,7 @@ h1 {
 }
 @media (max-width: 768px) {
     h1 {
-        margin-left: 5px;
+        margin-left: 10px;
     }
 }
 .dashboard .wrapper {
@@ -727,3 +727,29 @@ table span {
     font-size: 14px;
 }
 /* end dashboard section */
+
+/* start settings section */
+.settings .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+.settings .wrapper .box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.settings .wrapper .control textarea {
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid var(--bitdarker-grey);
+    padding: 10px;
+    height: 150px;
+}
+.settings .wrapper .control textarea::placeholder {
+    color: var(--bitdarker-grey);
+    font-size: 14px;
+}
+/* end settings section */
+
