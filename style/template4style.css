@@ -8,7 +8,7 @@
   --grey-color: #888;
   --lightblue-grey: #f1f5f9;
   --light-grey: #f6f6f6;
-  --bitdarker-grey: #cecece;
+  --bitdarker-grey: #dbdbdb;
 }
 
 *, *::before, *::after {
@@ -805,7 +805,37 @@ table span {
     font-weight: 600;
     padding: 5px 12px;
     border-radius: 8px;
-    font-size: 15px;}
-
+    font-size: 15px;
+}
+.settings .wrapper .social form ul li {
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    font-size: 15px;
+    display: flex;
+    border: 1px solid var(--bitdarker-grey);
+    align-items: center;
+}
+.settings .wrapper .social form ul li input {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    border-left: 1px solid var(--bitdarker-grey);
+    font-size: 14px;
+} 
+.settings .wrapper .social form ul li input::placeholder {
+    color: var(--grey-color);
+    font-size: 14px;
+}
+.settings .wrapper .social form ul li i {
+    padding: 10px;
+    width: 45px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--grey-color);
+    transition: 0.3s;
+}
+.settings .wrapper .social form ul li:has(input:focus) i {
+    color: #111;
+}
 /* end settings section */
 
