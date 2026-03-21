@@ -7,48 +7,11 @@
   --grey-color: #888;
   --lightblue-grey: #f1f5f9;
   --light-grey: #f6f6f6;
-  --bitdarker-grey: #cecece;
+  --bitdarker-grey: #dbdbdb;
 }
 /* Start Box */
 .trans {
   transition: 0.3s;
-}
-.d-flex {
-  display: flex;
-}
-.flexd-c {
-  display: flex;
-  flex-direction: column;
-}
-.f-wrap {
-  flex-wrap: wrap;
-}
-.align-center {
-  align-items: center;
-}
-.space-between {
-  justify-content: space-between;
-}
-.justify-center {
-  justify-content: center;
-}
-.d-grid {
-  display: grid;
-}
-.gap-10 {
-  gap: 10px;
-}
-.gap-15 {
-  gap: 15px;
-}
-.gap-20 {
-  gap: 20px;
-}
-.gap-30 {
-  gap: 30px;
-}
-.d-block {
-  display: block;
 }
 @media (max-width: 767px) {
   .block-mobile {
@@ -289,5 +252,71 @@
 .btn-shape {
   padding: 5px 12px;
   border-radius: 8px;
+}
+.flexd-c-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flexd-c-jc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flexd-c-ac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.d-flex {
+  display: flex;
+}
+.d-flex-jc-ac {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-flex-ac {
+  display: flex;
+  align-items: center;
+}
+.d-flex-jc {
+  display: flex;
+  justify-content: center;
+}
+.flexd-c {
+  display: flex;
+  flex-direction: column;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.d-grid {
+  display: grid;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-15 {
+  gap: 15px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-30 {
+  gap: 30px;
+}
+.d-block {
+  display: block;
 }
 /* End Components */

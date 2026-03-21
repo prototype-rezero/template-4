@@ -64,16 +64,14 @@ h1, h2, h3, h4, h5, h6 {
 /* main */
 .main {
     display: flex;
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
     gap: 0;
+    align-items: flex-start;
 }
 /* end main */
 
 /* aside */
 aside {
-    position: relative;
+    position: sticky;
     width: 200px;
     left: 0;
     top: 0;
@@ -240,7 +238,6 @@ aside ul li:not(.active):hover {
 
 /* end  aside */
 
-/* dashboard section */
 section {
     flex: 1;
     overflow: auto;
@@ -310,11 +307,6 @@ section {
     background-color: red;
     right: 35px;
 }
-.dashboard {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 h1 {
     margin-left: 20px;
     margin-bottom: 5px;
@@ -323,6 +315,13 @@ h1 {
     h1 {
         margin-left: 10px;
     }
+}
+
+/* dashboard section */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 .dashboard .wrapper {
     padding: 0 20px;
@@ -734,7 +733,7 @@ table span {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
-    padding: 0 20px;
+    padding-top: 0;
 }
 .settings .wrapper .box {
     background-color: white;
@@ -836,6 +835,42 @@ table span {
 }
 .settings .wrapper .social form ul li:has(input:focus) i {
     color: #111;
+}
+.settings .wrapper .widgets form li, .settings .wrapper .backup form li {    
+    display: flex;
+    align-items: center;
+}
+.settings .wrapper .widgets form input[type="checkbox"] {
+    margin-right: 10px;     
+}
+.settings .wrapper .widgets form label, .settings .wrapper .backup form label {
+    font-weight: 500;
+}
+.settings .wrapper .backup form input {
+    margin-right: 10px;
+}
+.settings .wrapper .backup .cards {
+    border-top: 1px solid var(--bitdarker-grey);
+    padding: 20px 10px;
+} 
+.settings .wrapper .backup .card { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 10px;
+    font-size: 18px;
+    padding: 15px 0;
+    border-radius: 10px;
+    border: 1px solid var(--bitdarker-grey);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.settings .wrapper .backup .card:hover {
+    color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+    transform: translateY(-5px);
 }
 /* end settings section */
 
