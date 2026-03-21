@@ -870,7 +870,7 @@ table span {
 .settings .wrapper .backup .card:hover {
     color: var(--blue-color);
     border: 1px solid var(--blue-color);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 /* end settings section */
 
