@@ -1023,7 +1023,157 @@ table span {
 /* end profile section */
 
 /* start projects section */
-
+.projects .wrapper {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(500px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.projects .wrapper .box {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.projects .wrapper .box > span  {
+    position: absolute;
+    color: var(--grey-color);
+    font-size: 14px;
+    top: 20px;
+    right: 20px;
+}
+.projects .wrapper .box .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.projects .wrapper .box .info h3 {
+    font-size: 20px;
+}
+.projects .wrapper .box .info p {
+    color: var(--grey-color);
+}
+.projects .wrapper .box .team {
+    display: flex;
+    position: relative;
+    height: 80px;
+    padding: 20px 0;
+    margin-left: 10px;
+}
+.projects .wrapper .box .team a img{
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid white;
+}
+.projects .wrapper .box .team a:nth-child(1) img{
+    left: 0;    
+}
+.projects .wrapper .box .team a:nth-child(2) img{
+    left: 30px;    
+}
+.projects .wrapper .box .team a:nth-child(3) img{
+    left: 60px;    
+}
+.projects .wrapper .box .team a:nth-child(4) img{
+    left: 90px;    
+}
+.projects .wrapper .box .team a:nth-child(5) img {
+    left: 120px;    
+}
+.projects .wrapper .box ul {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    padding: 20px 10px;
+    border-top: 1px solid var(--bitdarker-grey);
+    border-bottom: 1px solid var(--bitdarker-grey);
+}
+.projects .wrapper .box ul li {
+    background-color: var(--light-grey);
+    padding: 2px 7px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.projects .wrapper .box .price {
+    padding: 20px 0 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects .wrapper .box .price span:first-child {
+    position: relative;
+    background-color: var(--light-grey);
+    width: 250px;
+    height: 5px;
+    border-radius: 10px;
+}
+.projects .wrapper .box .price span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--orange-color);
+    width: 40%;
+    height: 5px;
+    border-radius: 10px;
+}
+.projects .wrapper .box:nth-child(2) .price span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--green-color);
+    width: 80%;
+    height: 5px;
+    border-radius: 10px;
+}
+.projects .wrapper .box:nth-child(3) .price span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--blue-color);
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+}
+.projects .wrapper .box:nth-child(4) .price span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--green-color);
+    width: 60%;
+    height: 5px;
+    border-radius: 10px;
+}
+.projects .wrapper .box:nth-child(5) .price span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--green-color);
+    width: 65%;
+    height: 5px;
+    border-radius: 10px;
+}
+.projects .wrapper .box:nth-child(6) .price span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--red-color);
+    width: 30%;
+    height: 5px;
+    border-radius: 10px;
+}
+.projects .wrapper .box .price span:last-child {
+    color: var(--blue-color);
+    font-weight: 600;
+}
 /* end projects section */
 
 

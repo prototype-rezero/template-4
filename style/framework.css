@@ -194,6 +194,12 @@
 .fw-bold {
   font-weight: bold;
 }
+.tt-c {
+  text-transform: capitalize;
+}
+.tt-u {
+  text-transform: uppercase;
+}
 @media (max-width: 767px) {
   .txt-c-mobile {
     text-align: center;
