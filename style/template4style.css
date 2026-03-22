@@ -40,6 +40,7 @@ body {
     min-height: 100vh;
     font-family: "open sans", sans-serif;
     color: #111;
+    background-color: var(--lightblue-grey);
 }
 
 ul, ol {
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 /* aside */
 aside {
     position: sticky;
-    width: 200px;
+    width: 180px;
     left: 0;
     top: 0;
     min-height: 100vh;
@@ -80,8 +81,7 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 52px;
-    padding: 20px;
-    padding-right: 0;
+    padding: 20px 0;
     /* box-shadow: 0 10px 20px #ccc; */
     z-index: 999;
     transition: 0.3s;
@@ -99,12 +99,12 @@ aside::after {
 }
 aside h3, aside > span {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
     margin: 0 auto;
-    transform: translateX(-10px);
     transition: 0.3s;
-    color: rgb(0, 66, 99);
+    color: rgb(0, 24, 36);
+    text-align: center;
 }
 aside > span {
     display: none;
@@ -118,7 +118,7 @@ aside h3::before  {
     left: 50%;
     transform: translateX(-50%);
     height: 2px;
-    background-color: rgb(0, 66, 99);
+    background-color: rgb(0, 24, 36);
 }
 aside h3::after  {
     content: "";
@@ -130,9 +130,9 @@ aside h3::after  {
     height: 20px;
     border: 4px solid white;
     border-radius: 50%;
-    background-color: rgb(0, 66, 99);
+    background-color: rgb(0, 24, 36);
 }
-@media (max-width: 768px) {
+@media (width <= 768px) {
     aside h3 {
         display: none;
     }
@@ -145,6 +145,8 @@ aside ul {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding-left: 15px;
+    padding-right: 0;
 }
 aside ul li {
     padding: 0 8px;
@@ -176,15 +178,15 @@ aside ul li.active {
 aside ul li.active a, aside ul li.active i {
     color: rgb(0, 66, 99);
 }
-@media (max-width: 768px) {
+@media (width <= 768px) {
     aside {
         width: 60px;
         padding: 20px 10px 20px 10px;
         gap: 20px;
     }
-    aside > span {
-        text-align: center;
-        transform: translateX(0);
+    aside ul{
+        padding-left: 0;
+        padding-right: 0;
     }
     aside ul li {
         border-radius: 50%;
@@ -208,7 +210,7 @@ aside ul li.active a, aside ul li.active i {
     padding-left: 0;
 }
 }
-@media (min-width: 769px) {
+@media (width >= 769px) {
 aside ul li.active::before{
     content: "";
     position: absolute;
@@ -311,9 +313,9 @@ h1 {
     margin-left: 20px;
     margin-bottom: 5px;
 }
-@media (max-width: 768px) {
+@media (width <= 768px) {
     h1 {
-        margin-left: 10px;
+        margin-left: 20px;
     }
 }
 
@@ -530,6 +532,11 @@ h1 {
 .tickets .cards {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+@media (width >= 2280px) {
+    .tickets .cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
 .tickets .cards .card {
     display: flex;
     flex-direction: column;
@@ -691,7 +698,7 @@ h1 {
     border: none;
     border-spacing: 5px;
 }
-@media (max-width: 991px) {
+@media (width <= 992px) {
     .tablediv {
         overflow-x: scroll;
     }
@@ -871,6 +878,152 @@ table span {
     color: var(--blue-color);
     border: 1px solid var(--blue-color);
     transform: translateY(-3px);
-}
+}                                                               
 /* end settings section */
+
+/* start profile section */
+.profile .container {
+    padding: 0 20px;
+}
+.profile .box {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.profile .prof {
+    padding: 0 20px;
+    margin: 0 20px;
+}
+
+.profile .prof .img  {
+    padding-right: 60px;
+    padding-left: 40px;
+    border-right: 1px solid var(--bitdarker-grey);
+    gap: 20px;
+}
+.profile .prof .img img {
+    width: 125px;
+    border-radius: 50%;
+}
+.profile .prof .img span{
+    position: relative;
+    background-color: var(--light-grey);
+    width: 175px;
+    height: 5px;
+    border-radius: 20px;
+}
+.profile .prof .img span::after {
+    position: absolute;
+    content: "";
+    background-color: var(--blue-color);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    border-radius: 20px;
+}
+.profile .prof .img .rate i{
+    color: orange;
+}
+.profile .prof .informations {
+    flex: 1;
+}
+.profile .prof .informations .line {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    border-top: 1px solid var(--bitdarker-grey);
+    padding-left: 20px;
+}
+.profile .prof .informations .line:first-of-type{
+    border: none;
+}
+.profile .prof .informations .line .info {
+    display: flex;
+    gap: 40px;
+}
+.profile .prof .informations .line .info .content {
+    width: 250px;
+    display: flex;
+    gap: 5px;
+}
+.profile .prof .informations .line p {
+    color: var(--grey-color);
+    font-weight: 500;
+}
+.profile .prof .informations .line .info .content p{
+    font-size: 15px;
+}
+.profile .prof .informations .line .info .content span {
+    font-size: 15px;
+    font-weight: 500;
+}
+.profile .skills {
+    width: 25%;
+}
+.profile .skills .skillsholder ul li {
+    display: flex;
+    gap: 10px;
+    padding: 15px 5px;
+    border-top: 1px solid var(--light-grey);
+}
+.profile .skills .skillsholder ul li:first-child {
+    border: none;
+    padding-top: 5px;
+}
+.profile .skills .skillsholder ul li span{
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    padding: 2px 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.profile .activities {
+    flex: 1;
+}
+.profile .activities .actsholder .act{
+    display: flex;
+    padding: 15px 0;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid var(--light-grey);
+}
+.profile .activities .actsholder .act:first-child {
+    border: none;
+    padding-top: 5px;
+}
+.profile .activities .actsholder .act img {
+    width: 60px;
+    border-radius: 50%;
+}
+.profile .activities .actsholder .act .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.profile .activities .actsholder .act .content p {
+    font-weight: 500;
+}
+.profile .activities .actsholder .act .content span {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+.profile .activities .actsholder .act .date {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+}
+.profile .activities .actsholder .act .date span:not(:first-of-type) {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+/* end profile section */
+
+/* start projects section */
+
+/* end projects section */
+
 
