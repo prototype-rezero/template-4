@@ -328,7 +328,7 @@ h1 {
 .dashboard .wrapper {
     padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
 }
 
@@ -530,11 +530,11 @@ h1 {
 
 /* tickets */
 .tickets .cards {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 @media (width >= 2280px) {
     .tickets .cards {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 .tickets .cards .card {
@@ -738,7 +738,7 @@ table span {
 /* start settings section */
 .settings .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
     padding-top: 0;
 }
@@ -1026,7 +1026,7 @@ table span {
 .projects .wrapper {
     padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(500px, 1fr));
     gap: 20px;
     padding-bottom: 20px;
 }
@@ -1176,4 +1176,64 @@ table span {
 }
 /* end projects section */
 
-
+/* start courses section */
+.courses .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+.courses .wrapper .card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.courses .wrapper .card:hover {
+    transform: translateY(-4px);
+}
+.courses .wrapper .card img:first-child {
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    top: 20px;
+    left: 20px
+}
+.courses .wrapper .card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid var(--bitdarker-grey);
+}
+.courses .wrapper .card .content h3 {
+    font-size: 20px;
+}
+.courses .wrapper .card .content p {
+    color: var(--grey-color);
+    font-size: 16px;
+}
+.courses .wrapper .card .price {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.courses .wrapper .card .price .div {
+    color: var(--grey-color);
+    font-size: 14px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.courses .wrapper .card .price .div i {
+    color: var(--orange-color);
+}
+.courses .wrapper .card .price > span {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+/* end courses section */
