@@ -1181,7 +1181,7 @@ table span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 0 20px;
+    padding: 0 20px 20px 20px;
 }
 .courses .wrapper .card {
     position: relative;
@@ -1237,3 +1237,107 @@ table span {
     color: var(--grey-color);
 }
 /* end courses section */
+
+/* start friends section */
+.friends .wrapper {
+    padding: 0 20px 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.friends .wrapper .card {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.friends .wrapper .card:hover {
+    transform: translateY(-4px);
+}
+.friends .wrapper .card img {
+    width: 90px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.friends .wrapper .card h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.friends .wrapper .card p {
+    text-align: center;
+    color: var(--grey-color);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.friends .wrapper .card .contact {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+.friends .wrapper .card .contact i {
+    font-size: 14px;
+    background-color: var(--light-grey);
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--grey-color);
+    transition: 0.3s;
+}
+.friends .wrapper .card .contact i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+.friends .wrapper .card .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid var(--bitdarker-grey);
+    border-bottom: 1px solid var(--bitdarker-grey);
+    padding: 20px 0;
+}
+.friends .wrapper .card .stats .stat {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 15px;
+    color: #222;
+}
+.friends .wrapper .card .stats .stat span {
+    font-weight: 600;
+}
+.friends .wrapper .card .date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.friends .wrapper .card .date span {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+.friends .wrapper .card .date .ctrl {
+    display: flex;
+    gap: 5px;
+}
+.friends .wrapper .card .date .ctrl button {
+    border-radius: 8px;
+    padding: 2px 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.friends .wrapper .card .date .ctrl button:first-child {
+    background-color:  var(--blue-color);
+}
+.friends .wrapper .card .date .ctrl button:last-child {
+    background-color:  var(--red-color);
+}
+/* end friends section */
