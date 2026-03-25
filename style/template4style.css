@@ -885,6 +885,16 @@ table span {
 .profile .container {
     padding: 0 20px;
 }
+@media (width <= 576px) {
+    .profile {
+        gap: 15px;
+    }
+    .profile .container {
+        padding: 0 15px;
+        gap: 15px;
+        margin-top: 0;
+    }
+}
 .profile .box {
     padding: 20px;
     border-radius: 10px;
@@ -894,11 +904,14 @@ table span {
     padding: 0 20px;
     margin: 0 20px;
 }
-
+@media (width <= 576px) {
+    .profile .prof {
+        margin: 0 15px;
+    }
+}
 .profile .prof .img  {
     padding-right: 60px;
     padding-left: 40px;
-    border-right: 1px solid var(--bitdarker-grey);
     gap: 20px;
 }
 .profile .prof .img img {
@@ -941,10 +954,11 @@ table span {
 }
 .profile .prof .informations .line .info {
     display: flex;
-    gap: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 .profile .prof .informations .line .info .content {
-    width: 250px;
+    flex: 1 0 240px;
     display: flex;
     gap: 5px;
 }
@@ -1016,10 +1030,62 @@ table span {
     gap: 5px;
     text-align: right;
 }
+@media (width <= 576px) {   
+    .profile .activities .actsholder .act .date {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+}
+}
 .profile .activities .actsholder .act .date span:not(:first-of-type) {
     font-size: 14px;
     color: var(--grey-color);
 }
+@media (width <= 576px) {
+    .activities .actsholder .act {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+/* media */
+@media (width <= 992px) {
+    .profile .prof {
+        flex-direction: column;
+    }
+    .profile .prof .img {
+        padding: 20px 0 0 0;
+        gap: 10px;
+    }
+    .profile .prof .informations {
+        padding: 0 0 10px 0;
+    }
+    .profile .prof .informations .line {
+        gap: 10px;
+        padding: 20px 0;
+    }
+    .profile .prof  .informations .line .info {
+    gap: 10px;
+    }
+} 
+@media (width <= 1200px) {
+    .profile .prof {
+        flex-direction: column;
+    }
+    .profile .prof .img {
+        padding: 20px 0 0 0;
+        gap: 10px;
+    }
+    .profile .container{
+        flex-direction: column;
+    }
+    .profile .container .skills {
+        width: 100%;
+    }
+}
+/* end media */
 /* end profile section */
 
 /* start projects section */
@@ -1029,6 +1095,13 @@ table span {
     grid-template-columns: repeat(auto-fit , minmax(500px, 1fr));
     gap: 20px;
     padding-bottom: 20px;
+}
+@media (width <= 576px) {
+    .projects .wrapper {
+        padding: 0 15px;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
 }
 .projects .wrapper .box {
     position: relative;
@@ -1174,6 +1247,42 @@ table span {
     color: var(--blue-color);
     font-weight: 600;
 }
+@media (width <= 576px) {
+    .projects .wrapper  {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .projects .wrapper .box{
+        padding: 15px;
+    }
+    .projects .wrapper .box > span {
+        top: 15px;
+        right: 15px;
+    }
+    .projects .wrapper .box .info {
+        gap: 5px;
+    }
+    .projects .wrapper .box .team {
+        padding: 15px 0;
+        height: 70px;
+    }
+    .projects .wrapper .box ul {
+        padding: 15px 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .projects .wrapper .box .price {
+        padding: 15px 0 5px 0 ;
+    }
+    .projects .wrapper .box .price span:first-child {
+        width: 220px;
+    }
+    .projects .wrapper .box p{
+        font-size: 15px;
+    }
+    .projects .wrapper .box{
+        padding: 15px;
+    }
+}
 /* end projects section */
 
 /* start courses section */
@@ -1182,6 +1291,13 @@ table span {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 0 20px 20px 20px;
+}
+@media (width <= 576px) {
+    .courses .wrapper {
+        padding: 0 15px;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
 }
 .courses .wrapper .card {
     position: relative;
@@ -1244,6 +1360,13 @@ table span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+}
+@media (width <= 576px) {
+    .friends .wrapper {
+        padding: 0 15px;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
 }
 .friends .wrapper .card {
     position: relative;
@@ -1349,11 +1472,23 @@ table span {
     display: flex;
     gap: 20px;
 }
+@media (width <= 576px) {
+    .files .wrapper {
+        padding: 0 15px;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+}
 .files .wrapper .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     flex: 1;
+}
+@media (width <= 576px) {
+    .files .wrapper .cards{
+        gap: 15px;
+    }
 }
 .files .wrapper .card {
     padding: 15px;
@@ -1483,6 +1618,16 @@ table span {
         transform: translateY(-2px);
     }
 }
+/* media */
+@media (width <= 768px) {
+    .files .wrapper {
+        flex-direction: column;
+    }
+    .files .wrapper .upload {
+        width: 100%;
+    }
+}
+/* media */
 /* end files section */
 
 /* start plans section */
@@ -1492,6 +1637,13 @@ table span {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
     padding-bottom: 20px;
+}
+@media (width <= 576px) {
+    .plans .wrapper {
+        padding: 0 15px;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
 }
 .plans .wrapper .plan {
     background-color: #fff;
@@ -1600,6 +1752,32 @@ table span {
 }
 .plans .wrapper .plan a:hover {
     transform: scale(1.04);
+}
+/* media */
+@media (width <= 576px) {
+    .plans .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .plans .wrapper .plan {
+        padding: 15px;
+        border-radius: 15px;
+        padding-bottom: 20px;
+    }
+    .plans .wrapper .plan .price {
+        padding: 15px;
+    }
+    .plans .wrapper .plan ul {
+        padding: 0;
+    }
+    .plans .wrapper .plan ul span {
+        font-size: 15px;
+    }
+    .plans .wrapper .plan .price p{
+        font-size: 26px;
+    }
+    .plans .wrapper .plan .price span {
+        font-size: 40px;
+    }
 }
 /* end plans section */
 
