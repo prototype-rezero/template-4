@@ -1484,3 +1484,122 @@ table span {
     }
 }
 /* end files section */
+
+/* start plans section */
+.plans .wrapper {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.plans .wrapper .plan {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 20px;
+}
+.plans .wrapper .plan:hover {
+    transform: translateY(-4px);
+}
+.plans .wrapper .plan .price {
+    background-color: var(--green-color);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 12px;
+    color: white;
+    border: 3px solid white;
+    outline: 3px solid var(--green-color);
+}
+.plans .wrapper .plan:nth-child(3) .price {
+    background-color: var(--orange-color);
+    outline: 3px solid var(--orange-color);
+}
+.plans .wrapper .plan:nth-child(2) .price {
+    background-color: var(--blue-color);
+    outline: 3px solid var(--blue-color);
+}
+.plans .wrapper .plan .price p{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+}
+.plans .wrapper .plan .price span {
+    position: relative;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+}
+.plans .wrapper .plan .price span::before {
+    content: "$";
+    position: absolute;
+    top: -10px;
+    left: -22px;
+    font-size: 30px;
+}
+.plans .wrapper .plan ul {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+.plans .wrapper .plan ul li{
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--light-grey);
+}
+.plans .wrapper .plan ul li:last-of-type {
+    border-bottom: none;
+}
+.plans .wrapper .plan ul li i {
+    color: var(--green-color);
+    margin-right: 10px;
+}
+.plans .wrapper .plan ul li i.yes {
+    color: var(--green-color);
+}
+.plans .wrapper .plan ul li i.non {
+    color: var(--orange-color);
+}
+.plans .wrapper .plan ul li span + i {
+    color: var(--bitdarker-grey);
+    margin-left: auto;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.plans .wrapper .plan ul li span + i:hover {
+    color: var(--green-color);
+}
+.plans .wrapper .plan:nth-child(2) ul li span + i:hover {
+    color: var(--blue-color);
+}
+.plans .wrapper .plan:nth-child(3) ul li span + i:hover {
+    color: var(--orange-color);
+}
+.plans .wrapper .plan a {
+    background-color: var(--green-color);
+    color: white;
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+.plans .wrapper .plan:nth-child(2) a {
+    background-color: var(--blue-color);
+}
+.plans .wrapper .plan:nth-child(3) a {
+    background-color: var(--orange-color);
+}
+.plans .wrapper .plan a:hover {
+    transform: scale(1.04);
+}
+/* end plans section */
+
