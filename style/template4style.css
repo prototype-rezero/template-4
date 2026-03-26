@@ -357,7 +357,7 @@ section {
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
-    border: 1px solid rgb(140, 0, 255);
+    border: 1px solid rgb(0, 53, 80);
 }
 .main section header  .icons img:hover {
     transform: scale(1.1);
