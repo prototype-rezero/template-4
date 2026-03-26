@@ -365,9 +365,11 @@
             </section>
         </div>
         <button class="btnaside" id="btnaside"><i class="fa-solid fa-bars"></i></button>
+        <div class="overlay" id="overlay"></div>
         <script>
             const aside = document.getElementById('aside');
             const btnaside = document.getElementById('btnaside');
+            const overlay = document.getElementById('overlay');
 
 
             // openBtn.addEventListener('click', () => {
@@ -380,7 +382,13 @@
 
             btnaside.addEventListener('click', () => {
             aside.classList.toggle('active');
-});
+            overlay.classList.toggle('show');
+    });
+            overlay.addEventListener('click', () => {
+            aside.classList.remove('active');
+            overlay.classList.remove('show');
+    });
+
         </script>
     </body>
 </html>

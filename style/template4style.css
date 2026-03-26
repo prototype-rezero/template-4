@@ -87,9 +87,26 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 999;
 }
 @media (width <= 576px) {
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.01);
+        backdrop-filter: blur(2px);
+        z-index: 998;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+    }
     .btnaside {
         display: block;
         position: fixed;
+    }
+    .overlay.show {
+        visibility: visible;
+        opacity: 1;
     }
 }
 /* end main */
@@ -842,6 +859,11 @@ table span {
     padding: 20px;
     border-radius: 10px;
 }
+@media (width <= 576px) {
+    .settings .wrapper .box {
+        padding: 15px;
+    }
+}
 .settings .wrapper .control textarea {
     resize: none;
     border-radius: 10px;
@@ -973,7 +995,12 @@ table span {
     color: var(--blue-color);
     border: 1px solid var(--blue-color);
     transform: translateY(-3px);
-}                                                               
+}                
+@media (width <= 576px) {
+    .settings .wrapper .backup .holder {
+        padding: 0px;
+    }
+}                                               
 /* end settings section */
 
 /* start profile section */
@@ -991,7 +1018,7 @@ table span {
     }
 }
 .profile .box {
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     background-color: white;
 }
@@ -1001,6 +1028,7 @@ table span {
 }
 @media (width <= 576px) {
     .profile .prof {
+        padding: 0 15px;
         margin: 0 15px;
     }
 }
