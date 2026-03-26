@@ -378,7 +378,13 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
 }
-
+@media (width <= 576px) {
+    .dashboard .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 0 15px 0px 15px;
+        gap: 15px;
+    }
+}
 .dashboard .wrapper .welcome .top {
     display: flex;
     justify-content: space-between;
@@ -388,7 +394,7 @@ h1 {
 }
 
 .dashboard .box {
-    padding: 20px;
+    padding: 15px;
     background-color: white;
     border-radius: 10px;
 }
@@ -455,7 +461,17 @@ h1 {
 .welcome .bottom a:hover {
     transform: scale(1.05);
 }
-
+@media (width <= 576px) {
+    .welcome .bottom .stats {
+        gap: 20px;
+        align-items: center;
+        padding: 18px 8px 15px 8px;
+        margin-bottom: 20px;
+    }
+    .welcome .bottom .stats .stat {
+        flex: 1 0 100px;
+    }
+}
 /* quickdraft */
 .quickdraft {
     padding: 20px;
@@ -625,9 +641,21 @@ h1 {
     padding: 5px 10px;
     border-radius: 10px;
     font-size: 14px;
-
 }
-
+@media (width <= 576px) {
+    .news .event {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px 0;
+        
+    }
+    .news .event img {
+        width: 110px;
+    }
+    .news .event .info h3 {
+        font-size: 16px;
+    }
+}
 /* tasks */
 .tasks .content .task {
     padding: 15px 0;
@@ -735,6 +763,11 @@ h1 {
   padding: 0 20px;  
 
 }
+@media (width <= 576px) {
+    div.holder {
+        padding: 15px;
+    }
+}
 .tablediv {
     background-color: var(--lightblue-grey);
     border-radius: 7px;
@@ -751,6 +784,11 @@ h1 {
     }
     .tablediv table {
         min-width: 800px;
+    }
+}
+@media (width <= 576px) {
+    .table {
+        padding: 0 15px;
     }
 }
 .tablediv table thead tr td{
@@ -788,6 +826,16 @@ table span {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
     padding-top: 0;
+}
+@media (width <= 576px) {
+    .settings .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-top: 0;
+    }
 }
 .settings .wrapper .box {
     background-color: white;
