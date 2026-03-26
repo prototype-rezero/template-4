@@ -322,12 +322,13 @@ section {
 .main section header .search {
     display: flex;
     align-items: center;
-    border: 1px solid var(--bitdarker-grey);
+    /* border: 1px solid var(--bitdarker-grey); */
     padding: 7px;
     padding-left: 10px;
     border-radius: 10px;
     gap: 10px;
     font-size: 14px;
+    box-shadow: 0 0 10px #eee;
     color: var(--bitdarker-grey);
 }
 .main section header .search input {
@@ -351,11 +352,12 @@ section {
     position: relative;
 }
 .main section header  .icons img{
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
+    border: 1px solid rgb(140, 0, 255);
 }
 .main section header  .icons img:hover {
     transform: scale(1.1);
@@ -363,6 +365,7 @@ section {
 .main section header  .icons i {
     font-size: 20px;
     color: #111;
+    transform: translateY(1px);
 }
 .main section header  .icons span {
     position: absolute;
@@ -371,7 +374,7 @@ section {
     height: 8px;
     border-radius: 50%;
     background-color: red;
-    right: 35px;
+    right: 38px;
 }
 h1 {
     margin-left: 20px;
