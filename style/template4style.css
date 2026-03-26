@@ -373,7 +373,7 @@ section {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: red;
+    background-color: var(--orange-color);
     right: 38px;
 }
 h1 {
@@ -448,7 +448,8 @@ h1 {
 }
 .welcome .bottom .stats {
     display: flex;
-    gap: 130px;
+    gap: 20px;
+    align-items: center;
     justify-content: center;
     padding: 20px 0px 15px 0px;
     border-top: 1px solid var(--bitdarker-grey);
@@ -457,6 +458,7 @@ h1 {
 }
 .welcome .bottom .stats .stat {
     display: flex;
+    flex: 1 0 150px;
     flex-direction: column;
     align-items: center;
     gap: 7px;
