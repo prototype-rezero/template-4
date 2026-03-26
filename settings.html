@@ -17,7 +17,7 @@
 </head>
     <body>
         <div class="main">
-            <aside>
+            <aside id="aside">
                 <span>PR</span><h3>Prototype-rezero</h3>
                 <ul>
                     <li class="trans">
@@ -202,5 +202,23 @@
                 </div>
             </section>
         </div>
+        <button class="btnaside" id="btnaside"><i class="fa-solid fa-bars"></i></button>
+        <script>
+            const aside = document.getElementById('aside');
+            const btnaside = document.getElementById('btnaside');
+
+
+            // openBtn.addEventListener('click', () => {
+            // sidebar.classList.add('active');
+            // });
+
+            // closeBtn.addEventListener('click', () => {
+            // sidebar.classList.remove('active');
+            // });
+
+            btnaside.addEventListener('click', () => {
+            aside.classList.toggle('active');
+});
+        </script>
     </body>
 </html>

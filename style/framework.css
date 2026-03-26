@@ -200,6 +200,15 @@
 .tt-u {
   text-transform: uppercase;
 }
+.d-none {
+  display: none;
+}
+.d-inblock {
+  display: inline-block;
+}
+.d-block {
+  display: block;
+}
 @media (max-width: 767px) {
   .txt-c-mobile {
     text-align: center;

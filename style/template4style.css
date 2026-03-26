@@ -67,6 +67,30 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 0;
     align-items: flex-start;
+    position: relative;
+}
+.btnaside {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: rgb(0, 66, 99);
+    display: none;
+    background-color: var(--light-grey);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 0 20px #eee;
+    z-index: 999;
+}
+@media (width <= 576px) {
+    .btnaside {
+        display: block;
+        position: fixed;
+    }
 }
 /* end main */
 
@@ -210,6 +234,24 @@ aside ul li.active a, aside ul li.active i {
     padding-left: 0;
 }
 }
+@media (width <= 576px) {
+    .main {
+        position: relative;
+    }
+    aside {
+        position: absolute;
+        left: -60px;
+        transition: 0.3s;
+    }
+    aside.active {
+        position: fixed;
+        left: 0;
+    }
+    aside::after{
+        display: none;
+    }
+
+}
 @media (width >= 769px) {
 aside ul li.active::before{
     content: "";
@@ -254,6 +296,11 @@ section {
     height: 64px;
     background-color: white;
     border-bottom-left-radius: 10px;
+}
+@media (width <= 576px) {
+    .main section header {
+        border-bottom-left-radius: 0;
+    }
 }
 .main section header .search {
     display: flex;
